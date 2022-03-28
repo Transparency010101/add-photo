@@ -1,0 +1,20 @@
+doctype html
+html(lang="zxx")
+    head
+        include html/_head.pug
+        // * <<<Адаптив>>>
+        //- meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        meta(name="viewport" content="width=device-width")
+        // * <<</Адаптив>>>
+        // * <<<CSS стили>>>
+        link(rel="stylesheet" href="css/style.min.css")
+        // * <<</CSS стили>>>
+        title Documents
+    body 
+        include html/_additional.pug
+        .wrapper
+            include html/_header.pug
+            .page
+                //- $ include html/modules/burger.html
+            include html/_footer.pug
+        script(src="js/app.min.js")

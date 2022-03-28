@@ -1,0 +1,169 @@
+/* ! <Burger>============================================================================================================================================= */
+
+// : burger config
+// : header
+// : header-burger
+
+// * burger config {
+
+$burger__headerColor: #000;
+$burger__dieColor: #0f0;
+$burger__sizeMenu: 2px;
+$burger__colorMenu: #fff;
+$burger__mediaWidth: 768px + 1px;
+// $ $burger__mediaWidth: em(768) + em(1px);
+$burger__linksColor: #fff;
+
+// * burger config }
+
+// * header {
+.header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    padding: 15px 0;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $burger__headerColor;
+        z-index: 3;
+    }
+
+    &__body {
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        height: min-content;
+        padding: 0 20px;
+    }
+
+    &__logo {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background-color: #fff;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__list {
+        display: flex;
+
+        position: relative;
+        z-index: 3;
+    }
+
+    &__link a {
+        color: $burger__linksColor;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    &__link:last-child {
+        margin-left: 0;
+    }
+
+    @media (max-width: #{$burger__mediaWidth}) {
+        &__menu {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $burger__dieColor;
+
+            padding: 100px 10px 20px 10px;
+
+            transition: all 0.5s ease 0s;
+        }
+
+        &__menu.active {
+            top: 0;
+        }
+
+        &__list {
+            display: block;
+        }
+
+        &__link {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+
+// * header }
+
+// * header-burger {
+
+.header-burger {
+    display: none;
+}
+
+@media (max-width: #{$burger__mediaWidth}) {
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .header-burger span,
+    .header-burger::before,
+    .header-burger::after {
+        content: "";
+        background-color: $burger__colorMenu;
+        position: absolute;
+        width: 100%;
+        height: $burger__sizeMenu;
+        left: 0;
+
+        transition: all 0.3s ease 0s;
+    }
+
+    .header-burger span {
+        position: absolute;
+        background-color: $burger__colorMenu;
+        left: 0;
+        width: 100%;
+        height: $burger__sizeMenu;
+        top: 9px;
+    }
+
+    .header-burger::before {
+        top: 0;
+    }
+
+    .header-burger::after {
+        bottom: 1px;
+    }
+
+    .header-burger.active::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header-burger.active span {
+        display: none;
+    }
+
+    .header-burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+}
+// * header-burger }
+/* ! </Burger>============================================================================================================================================ */
