@@ -2,13 +2,23 @@
 /* : import фрагментов кода с папки assests */
 
 /* ! <Импорт модулей>============================================================================================================================================</Импорт> */
-@import "modules/burger.scss";
+@import "modules/header&burger";
 /* ! </Импорт модулей>============================================================================================================================================</Импорт> */
 
-@import "modules/_fonts";
 @import "modules/_additionally";
+@import "modules/_fonts";
 
 /* ! <import фрагментов кода с папки assests>============================================================================================================================================</import> */
 @import "modules/_nullstyle";
+@import "assets/_mainFrame";
+@import "assets/_ourWorks";
+@import "assets/_ourLocations";
+@import "assets/_photoStudioDesign";
+@import "assets/_services";
+@import "assets/_stagesOfWork";
+@import "assets/_cost";
+@import "assets/_certificate";
+@import "assets/_reviews";
+@import "assets/_form";
 /* ! <import фрагментов кода с папки assests>============================================================================================================================================</import> */
 

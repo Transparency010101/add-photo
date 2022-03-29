@@ -39,7 +39,7 @@ section {
 html,
 body {
     height: 100%;
-    font-family: $fontF;
+    font-family: $mainFontFamily;
     line-height: 1;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
@@ -72,6 +72,7 @@ button::-moz-focus-inner {
 
 a {
     background-color: transparent;
+    display: block;
 }
 
 a,

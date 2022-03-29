@@ -8,6 +8,8 @@
 $container: 1120; // @ px
 $mainFontSize: 16; // @ px
 $mainFontFamily: Arial, sans-serif;
+$textColor1: #333;
+$textColor2: #4A4A4A;
 // ! </Переменные>============================================================================================================================================// !
 
 // ! <Миксины>=============================================================================================================================================// !
@@ -51,7 +53,6 @@ $mainFontFamily: Arial, sans-serif;
     @return $remValue;
 }
 
-
 @function em($value) {
     // * px to em
     $remValue: math.div($value, $mainFontSize) + em;
@@ -75,4 +76,41 @@ $mainFontFamily: Arial, sans-serif;
     flex: 1 1 auto;
 }
 /* * Небольшие классы } */
+
+.mainTitle {
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: 120%;
+    color: $textColor1;
+}
+
+/* * main button { */
+.mainButton {
+    background: linear-gradient(180deg, #ffa96b -21.43%, #ee7a28 100%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        background: linear-gradient(180deg, #FFA96B 58.75%, #EE7A28 173.44%);
+    }
+    &:active {
+        width: 276px;
+        height: 38px;
+    }
+
+    transition: all 0.4s ease 0s;
+    &__text {
+        font-weight: 600;
+        line-height: rem(20);
+        color: #fff;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+}
+/* * main button } */
+
+/* navigation menu { */
+// * soon
+/* navigation links } */
 // ! </Шаблоны>============================================================================================================================================// !

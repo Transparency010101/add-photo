@@ -1,7 +1,7 @@
 doctype html
 html(lang="zxx")
     head
-        include html/_head.pug
+        include html/modules/_head.pug
         // * <<<Адаптив>>>
         //- meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
         meta(name="viewport" content="width=device-width")
@@ -9,12 +9,23 @@ html(lang="zxx")
         // * <<<CSS стили>>>
         link(rel="stylesheet" href="css/style.min.css")
         // * <<</CSS стили>>>
-        title Documents
-    body 
-        include html/_additional.pug
+        title addPhoto
+    body
+        include html/modules/_additional.pug
         .wrapper
-            include html/_header.pug
+            //- include html/_header.pug
             .page
-                //- $ include html/modules/burger.html
+                // ! <<<Page>>>
+                include html/_mainFrame.pug
+                include html/_ourWorks.pug
+                include html/_ourLocations.pug
+                include html/_photoStudioDesign.pug
+                include html/_services.pug
+                include html/_stagesOfWork.pug
+                include html/_cost.pug
+                include html/_certificate.pug
+                include html/_reviews.pug
+                include html/_form.pug
+                // ! <<</Page>>>
             include html/_footer.pug
         script(src="js/app.min.js")

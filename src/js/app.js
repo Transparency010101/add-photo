@@ -2,8 +2,5 @@
 import * as fileIsWebP from './modules/flsfunc.js';
 fileIsWebP.isWebp();
 
-// * Импорт модулей
-// $ import "./modules/burger.js";
-
-
-
+import "./scripts/smallScript.js";
+import "./scripts/swiper.js";
